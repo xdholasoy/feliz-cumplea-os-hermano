@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Cumpleaños, Alfredo</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffcccb;
+            flex-direction: column;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .card {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transition: transform 0.5s;
+        }
+        .card:hover {
+            transform: scale(1.1);
+        }
+        .card::before {
+            content: "🎂🎉";
+            font-size: 50px;
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .message {
+            opacity: 0;
+            transition: opacity 1s;
+        }
+        .card:hover .message {
+            opacity: 1;
+        }
+        .cake {
+            font-size: 50px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>¡Feliz Cumpleaños, Alfredo! 🎂</h1>
+    <div class="card">
+        <div class="message">
+            <h2>¡Feliz Cumpleaños, hermano Alfredo! 🎉</h2>
+            <p>Que tengas un día maravilloso lleno de alegría y felicidad. 🥳🎁</p>
+        </div>
+    </div>
+    <div class="cake">🎂</div>
+    <audio autoplay loop>
+        <source src="https://www.bensound.com/bensound-music/bensound-birthday.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio.
+    </audio>
+</body>
+</html>
